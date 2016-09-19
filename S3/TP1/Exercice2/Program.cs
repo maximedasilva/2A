@@ -10,6 +10,7 @@ namespace Exercice2
     {
         static void Main(string[] args)
         {
+            MicroOrdinateurTest m1 = new MicroOrdinateurTest();
         }
     }
 }
