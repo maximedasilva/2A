@@ -7,31 +7,27 @@ namespace Universites
 {
     public class Engage : Enseignant
     {
-        public Engage()
+        public double salireBase { get; set; } =1500;
+        public Engage(string Nom, int nbHeure):base(Nom,nbHeure)
         {
-            throw new System.NotImplementedException();
+
         }
 
         public static int QuotaHeureNormales
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
+            get; set;
+        } = 192;
 
         public override int getHC()
         {
-            throw new System.NotImplementedException();
+            if (nbHeureTotal - QuotaHeureNormales > 0)
+                return nbHeureTotal - QuotaHeureNormales;
+            else return 0;
         }
 
         public override double getRemuneration()
         {
-            throw new System.NotImplementedException();
+            return salireBase+ getHC() * Enseignant.prixHeureComplementaire;
         }
     }
 }

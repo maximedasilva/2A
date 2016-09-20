@@ -7,19 +7,19 @@ namespace Universites
 {
     public class Exterieurs : Enseignant
     {
-        public Exterieurs(string nom)
+        public Exterieurs(string Nom, int nbHeure):base(Nom,nbHeure)
         {
-            throw new System.NotImplementedException();
+           
         }
 
         public override int getHC()
         {
-            throw new System.NotImplementedException();
+            return nbHeureTotal;
         }
 
         public override double getRemuneration()
         {
-            throw new System.NotImplementedException();
+            return (getHC() * Enseignant.prixHeureComplementaire);
         }
     }
     

@@ -9,26 +9,28 @@ namespace Universites
     {
         protected string nom;
         protected static double prixHeureComplementaire = 35;
-
-        public static int nbHeureComplementaire
+        protected int nbHeureTotal
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get; set;
+        }
 
-            set
-            {
-            }
+        public Enseignant(string Nom, int nbHeure)
+        {
+            nom = Nom;
+            nbHeureTotal = nbHeure;
         }
 
         public string getNom()
         {
-            return "";
+            return nom;
         }
 
         public abstract int getHC();
 
         public abstract double getRemuneration();
+        public override string ToString()
+        {
+            return (getRemuneration() + " " + nom);
+        }
     }
 }

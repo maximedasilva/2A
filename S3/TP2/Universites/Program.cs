@@ -10,7 +10,12 @@ namespace Universites
     {
         static void Main(string[] args)
         {
-            Enseignant e = new Engage();
+            Enseignant jackDaniel = new Engage("Jacques Daniel",600);
+            Console.WriteLine(jackDaniel);
+            Enseignant d = new EleveEnseignant("coucou", 600);
+            Enseignant f = new Exterieurs("test", 600);
+            Console.WriteLine(d);
+            Console.WriteLine(f);
         }
 
     }

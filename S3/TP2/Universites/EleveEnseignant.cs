@@ -7,20 +7,27 @@ namespace Universites
 {
     public class EleveEnseignant : Enseignant
     {
-        public static int nbHeureMaxEnseignement { get; set; }
-        public EleveEnseignant()
+        public static int nbHeureMaxEnseignement { get; set; } = 96;
+        public EleveEnseignant(string Nom, int nbHeure):base(Nom,nbHeure)
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public override int getHC()
         {
-            throw new System.NotImplementedException();
+            if(nbHeureTotal<nbHeureMaxEnseignement)
+            { return nbHeureTotal;
+            }
+            else
+            {
+                nbHeureTotal = nbHeureMaxEnseignement;
+                    return nbHeureTotal;
+            }
         }
 
         public override double getRemuneration()
         {
-            throw new System.NotImplementedException();
+            return Enseignant.prixHeureComplementaire * getHC()*0.18;
         }
     }
 }
