@@ -8,5 +8,9 @@ namespace Exercice4
 {
     class Navale
     {
+        public void affichePlateau()
+        {
+
+        }
     }
 }
