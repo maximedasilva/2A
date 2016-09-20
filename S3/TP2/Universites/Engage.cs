@@ -7,7 +7,12 @@ namespace Universites
 {
     public class Engage : Enseignant
     {
-        public int QuotaHeureNormales
+        public Engage()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public static int QuotaHeureNormales
         {
             get
             {
@@ -19,7 +24,7 @@ namespace Universites
             }
         }
 
-        public override double getHC()
+        public override int getHC()
         {
             throw new System.NotImplementedException();
         }

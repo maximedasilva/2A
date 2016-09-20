@@ -8,9 +8,9 @@ namespace Universites
     public abstract class Enseignant
     {
         protected string nom;
-        protected static double prixHeureComplementaire;
+        protected static double prixHeureComplementaire = 35;
 
-        public int nbHeureComplementaire
+        public static int nbHeureComplementaire
         {
             get
             {
@@ -27,7 +27,7 @@ namespace Universites
             return "";
         }
 
-        public abstract double getHC();
+        public abstract int getHC();
 
         public abstract double getRemuneration();
     }

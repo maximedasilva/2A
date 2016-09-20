@@ -7,12 +7,18 @@ namespace Universites
 {
     public class EleveEnseignant : Enseignant
     {
-        public double getHC()
+        public static int nbHeureMaxEnseignement { get; set; }
+        public EleveEnseignant()
         {
             throw new System.NotImplementedException();
         }
 
-        public void getRemuneration()
+        public override int getHC()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override double getRemuneration()
         {
             throw new System.NotImplementedException();
         }

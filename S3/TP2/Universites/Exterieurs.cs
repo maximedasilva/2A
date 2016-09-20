@@ -7,12 +7,17 @@ namespace Universites
 {
     public class Exterieurs : Enseignant
     {
-        public override double getHC()
+        public Exterieurs(string nom)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void getRemuneration()
+        public override int getHC()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override double getRemuneration()
         {
             throw new System.NotImplementedException();
         }
