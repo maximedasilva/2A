@@ -8,7 +8,7 @@ namespace VoitureGestion
     public class Voiture
     {
         private int numVoiture;
-
+        public float prixVoyage { get; set; }
         public Voiture(int _nbChevaux, int _numVoiture)
         {
             NbChevaux = _nbChevaux;
@@ -42,14 +42,38 @@ namespace VoitureGestion
             throw new System.NotImplementedException();
         }
 
-        public int Conso()
+        public float Conso()
         {
-            throw new System.NotImplementedException();
+            if(Vitesse<80)
+            {
+                return 6 + ((float)0.15 * (float)(NbChevaux - 4));
+            }
+
+            else if (Vitesse > 80 && Vitesse < 100)
+            {
+                return 7 + ((float)0.15 * (float)(NbChevaux - 4));
+            }
+
+            else if (Vitesse > 100 && Vitesse < 120)
+            {
+                return 8 + ((float)0.15 * (float)(NbChevaux - 4));
+            }
+
+            else
+            {
+                return 9 + ((float)0.15 * (float)(NbChevaux - 4));
+            }
+            
         }
 
+        public void Depanner()
+        {
+            prixVoyage += 100;
+            FaireLePlein();
+        }
         public void FaireLePlein()
         {
-            throw new System.NotImplementedException();
+          prixVoyage+=(Reservoir.Remplir());
         }
     }
 }

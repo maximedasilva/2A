@@ -22,9 +22,16 @@ namespace VoitureGestion
             get; set;
         }
 
-        public void Remplir()
+        public float Remplir()
         {
+            float aRemplir = capacite - QuantiteActuelle;
             QuantiteActuelle = capacite;
+            return aRemplir;
+        }
+
+        public int distanceMaxi()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

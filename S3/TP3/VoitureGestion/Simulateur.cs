@@ -7,24 +7,21 @@ namespace VoitureGestion
 {
     public class Simulateur
     {
+       
         public Simulateur()
         {
-            Voiture = new Voiture(_nbChevaux, _num);
+          
         }
-
+        public void Demarrer(Voiture v)
+        {
+            Voiture = v;
+        }
         public Voiture Voiture
         {
-            get;
+            get; set;
         }
+       
 
-        public float PrixVoyage()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Depanner()
-        {
-            throw new System.NotImplementedException();
-        }
+       
     }
 }
