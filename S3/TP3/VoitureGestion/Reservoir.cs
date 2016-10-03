@@ -9,29 +9,35 @@ namespace VoitureGestion
     {
         public Reservoir(int puissance)
         {
-            capacite = puissance;
+            if (puissance <= 6)
+            {
+                capacite = 40;
+            }
+            else
+                capacite = 60;
+            QuantiteActuelle = capacite;
         }
 
-        public int capacite
+        public double capacite
         {
             get; set;
         }
 
-        public int QuantiteActuelle
+        public double QuantiteActuelle
         {
             get; set;
         }
 
-        public float Remplir()
+        public double Remplir()
         {
-            float aRemplir = capacite - QuantiteActuelle;
+            double aRemplir = capacite - QuantiteActuelle;
             QuantiteActuelle = capacite;
             return aRemplir;
         }
 
-        public int distanceMaxi()
+        public double distanceMaxi(double conso)
         {
-            throw new System.NotImplementedException();
+            return (QuantiteActuelle / conso)*100;
         }
     }
 }

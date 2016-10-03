@@ -8,7 +8,7 @@ namespace VoitureGestion
     public class Voiture
     {
         private int numVoiture;
-        public float prixVoyage { get; set; }
+        public double prixVoyage { get; set; }
         public Voiture(int _nbChevaux, int _numVoiture)
         {
             NbChevaux = _nbChevaux;
@@ -27,52 +27,72 @@ namespace VoitureGestion
             get; 
         }
 
-        public float Vitesse
-        {
-            get; set;
-        }
-
+   
         public int NbChevaux
         {
             get; set;
         }
 
-        public void rouler()
+        public void rouler(double nbKilometres, double _vitesse)
         {
-            throw new System.NotImplementedException();
+
+            Compteur.Vitesse = _vitesse;
+            while (nbKilometres > 0)
+            {
+                if(Reservoir.distanceMaxi(Conso()) <nbKilometres)
+                {
+                    nbKilometres -= Reservoir.distanceMaxi(Conso());
+                    Console.WriteLine(Reservoir.distanceMaxi(Conso()));
+                    Depanner();
+                }
+               
+                    if(nbKilometres>100 && Conso()>Reservoir.QuantiteActuelle)
+                    {
+                        Reservoir.QuantiteActuelle -= Conso();
+                    }
+                    else
+                    {
+                        Reservoir.QuantiteActuelle -= Conso() / 100;
+                    nbKilometres--;
+                    }
+                
+            }
+            FaireLePlein();
         }
 
         public float Conso()
         {
-            if(Vitesse<80)
+            if(Compteur.Vitesse<80)
             {
-                return 6 + ((float)0.15 * (float)(NbChevaux - 4));
+                return 6 + ((float)0.0015 * (float)(NbChevaux - 4));
             }
 
-            else if (Vitesse > 80 && Vitesse < 100)
+            else if (Compteur.Vitesse > 80 && Compteur.Vitesse < 100)
             {
-                return 7 + ((float)0.15 * (float)(NbChevaux - 4));
+                return 7 + ((float)0.0015 * (float)(NbChevaux - 4));
             }
 
-            else if (Vitesse > 100 && Vitesse < 120)
+            else if (Compteur.Vitesse > 100 && Compteur.Vitesse < 120)
             {
-                return 8 + ((float)0.15 * (float)(NbChevaux - 4));
+                return 8 + ((float)0.0015 * (float)(NbChevaux - 4));
             }
 
             else
             {
-                return 9 + ((float)0.15 * (float)(NbChevaux - 4));
+                return 9 + ((float)0.0015 * (float)(NbChevaux - 4));
             }
             
         }
 
         public void Depanner()
         {
+            Console.WriteLine("Depannage");
             prixVoyage += 100;
             FaireLePlein();
         }
         public void FaireLePlein()
         {
+            Console.WriteLine("plein");
           prixVoyage+=(Reservoir.Remplir());
         }
     }

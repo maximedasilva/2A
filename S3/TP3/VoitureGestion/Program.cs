@@ -10,6 +10,10 @@ namespace VoitureGestion
     {
         static void Main(string[] args)
         {
+            Simulateur s = new Simulateur();
+            Voiture v = new Voiture(6, 1);
+            s.Demarrer(v);
+            Console.WriteLine(v.prixVoyage);
         }
     }
 }

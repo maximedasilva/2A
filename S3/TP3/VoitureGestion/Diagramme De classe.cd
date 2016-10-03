@@ -1,2 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VoitureGestion.Voiture">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIAFAAAAQAAACAAAAAAABAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Voiture.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Reservoir" />
+      <Property Name="Compteur" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VoitureGestion.Compteur">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Compteur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VoitureGestion.Reservoir">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAgAAAAAIAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Reservoir.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VoitureGestion.Simulateur">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Simulateur.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Voiture" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
