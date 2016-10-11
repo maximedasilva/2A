@@ -15,7 +15,7 @@ namespace VoitureGestion
         public void Demarrer(Voiture v)
         {
             Voiture = v;
-            v.rouler(12000, 60);
+            v.rouler(1000, 60);
         }
         public Voiture Voiture
         {
