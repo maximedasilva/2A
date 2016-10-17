@@ -76,7 +76,7 @@
             this.OptionCLB.Name = "OptionCLB";
             this.OptionCLB.Size = new System.Drawing.Size(152, 79);
             this.OptionCLB.TabIndex = 4;
-            this.OptionCLB.SelectedIndexChanged += new System.EventHandler(this.OptionCLB_SelectedIndexChanged);
+        //    this.OptionCLB.SelectedIndexChanged += new System.EventHandler(this.OptionCLB_SelectedIndexChanged);
             // 
             // radioButton1
             // 
@@ -88,7 +88,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Inter Entreprises";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+      //      this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 

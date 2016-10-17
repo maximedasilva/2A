@@ -161,7 +161,7 @@
             this.MinusBtn.TabIndex = 11;
             this.MinusBtn.Text = "-";
             this.MinusBtn.UseVisualStyleBackColor = true;
-            this.MinusBtn.Click += new System.EventHandler(this.MinusBtn_Click);
+            this.MinusBtn.Click += new System.EventHandler(this.OperandClick);
             // 
             // PlusBtn
             // 
@@ -171,6 +171,7 @@
             this.PlusBtn.TabIndex = 12;
             this.PlusBtn.Text = "+";
             this.PlusBtn.UseVisualStyleBackColor = true;
+            this.PlusBtn.Click += new System.EventHandler(this.OperandClick);
             // 
             // CencelBtn
             // 
@@ -189,6 +190,7 @@
             this.EqualBtn.TabIndex = 14;
             this.EqualBtn.Text = "=";
             this.EqualBtn.UseVisualStyleBackColor = true;
+            this.EqualBtn.Click += new System.EventHandler(this.EqualBtn_Click);
             // 
             // Form1
             // 
