@@ -50,6 +50,7 @@
             this.mainTextBox.Name = "mainTextBox";
             this.mainTextBox.Size = new System.Drawing.Size(125, 20);
             this.mainTextBox.TabIndex = 1;
+            this.mainTextBox.TextChanged += new System.EventHandler(this.mainTextBox_TextChanged);
             // 
             // clickBtn
             // 

@@ -15,6 +15,9 @@ namespace Exercice2
         public Form1()
         {
             InitializeComponent();
+
+            clickBtn.Enabled = false;
+            mainTextBox.Enabled = false;
         }
         Timer timer;
         private void beginBtn_Click(object sender, EventArgs e)
@@ -24,15 +27,18 @@ namespace Exercice2
             timer.Enabled = true;
             timer.Tick+=new EventHandler(timerEnd);
             timer.Start();
+            mainTextBox.Enabled = true;
         }
 
         private void timerEnd(object sender, EventArgs e)
         {
+            timer.Stop();
             MessageBox.Show("Bravo vous avez fait "+ cptLbl.Text);
             cptLbl.Text = "0";
             mainTextBox.Text = "";
-            timer.Stop();
-            
+
+            mainTextBox.Enabled = false;
+            clickBtn.Enabled = false;
         }
 
         private void clickBtn_Click(object sender, EventArgs e)
@@ -40,6 +46,14 @@ namespace Exercice2
             if(mainTextBox.Text=="bonjour")
             {
                cptLbl.Text =Convert.ToString(Convert.ToInt32(cptLbl.Text) + 1);
+            }
+        }
+
+        private void mainTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if(mainTextBox.Text=="bonjour")
+            {
+                clickBtn.Enabled = true;
             }
         }
     }
